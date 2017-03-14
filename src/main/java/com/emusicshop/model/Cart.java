@@ -8,14 +8,10 @@ public class Cart {
 	private String cartId;
 	private Map<String, CartItem> cartItems;
 	private double grandTotal;
-	private double totalQty;
 	
-	
-
 	private Cart(){
 		cartItems = new HashMap<String, CartItem>();
 		grandTotal = 0;
-		totalQty = 0;
 	}
 	
 	public Cart(String cartId){
@@ -46,48 +42,31 @@ public class Cart {
 	public void setGrandTotal(double grandTotal) {
 		this.grandTotal = grandTotal;
 	}
-	
-	public double getTotalQty() {
-		return totalQty;
-	}
-
-	public void setTotalQty(double totalQty) {
-		this.totalQty = totalQty;
-	}
 
 	public void addCartItem(CartItem item){
 		
 		String productId=item.getProduct().getProductId();
-		
 		if(cartItems.containsKey(productId)){
 			CartItem existingCartItem = cartItems.get(productId);
 			existingCartItem.setQuantity(existingCartItem.getQuantity()+item.getQuantity());
+			existingCartItem.setTotalPrice(existingCartItem.getQuantity()*item.getTotalPrice());
 			cartItems.put(productId, existingCartItem);
 		}else{
 			cartItems.put(productId, item);
 		}
 		updateGrandTotal();
-		updateTotalQuantity();
 	}
 	
 	public void removeCartItem(CartItem item){
 		String productId=item.getProduct().getProductId();
 		cartItems.remove(productId);
 		updateGrandTotal();
-		updateTotalQuantity();
 	}
 	
 	public void updateGrandTotal(){
 		grandTotal=0;
 		for(CartItem item : cartItems.values()){
 			grandTotal = grandTotal + item.getTotalPrice();
-		}
-	}
-	
-	public void updateTotalQuantity(){
-		totalQty = 0;
-		for (CartItem item : cartItems.values()){
-			totalQty = totalQty + item.getQuantity();
 		}
 	}
 }

@@ -26,8 +26,8 @@
 					<th>Action</th>
 				</tr>
 				<tr ng-repeat="item in cart.cartItems">
-					<th>{{item.productName}}</th>
-					<th>{{item.productPrice}}</th>
+					<th>{{item.product.productName}}</th>
+					<th>{{item.product.productPrice}}</th>
 					<th>{{item.quantity}}</th>
 					<th>{{item.totalPrice}}</th>
 					<th><a href="#" class="label label-danger" ng-click="removeFromCart(item.product.productId)">
