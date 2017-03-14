@@ -1,16 +1,12 @@
 package com.emusicshop.model;
 
-import java.io.Serializable;
-
-import javax.persistence.Entity;
-
-@Entity
-public class CartItem implements Serializable{
+//@Entity
+public class CartItem /*implements Serializable*/{
 	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 6898602563168644797L;
+	//private static final long serialVersionUID = 6898602563168644797L;
 	private Product product;
 	private int quantity;
 	private double totalPrice;
