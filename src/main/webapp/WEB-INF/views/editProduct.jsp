@@ -11,7 +11,7 @@
 		</div>
 
 		<form:form
-			action="${pageContext.request.contextPath}/admin/productInventory/editProduct?${_csrf.parameterName}=${_csrf.token}"
+			action="${pageContext.request.contextPath}/admin/product/editProduct?${_csrf.parameterName}=${_csrf.token}"
 			method="post" commandName="product" enctype="multipart/form-data">
 			<form:hidden path="productId" value="${product.productId}"/>
 			

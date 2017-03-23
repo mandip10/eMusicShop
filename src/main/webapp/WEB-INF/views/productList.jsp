@@ -29,7 +29,7 @@
 					<td>${product.productCategory}</td>
 					<td>${product.productCondition}</td>
 					<td>${product.productPrice} USD</td>
-					<td><a href="<spring:url value="/productList/viewProduct/${product.productId}" />"
+					<td><a href="<spring:url value="/product/viewProduct/${product.productId}" />"
 					class="btn btn-primary"><!-- <span class="glyphicon glyphicon-info-sign"></span> -->Detail</a></td>
 				</tr>
 			</c:forEach>

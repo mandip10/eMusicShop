@@ -1,15 +1,15 @@
 package com.emusicshop.dao;
 
+import java.io.IOException;
+
 import com.emusicshop.model.Cart;
 
 public interface CartDao {
 	
-	Cart create(Cart cart);
+	Cart getCartById(int cartId);
 	
-	Cart read(String cartId);
+	Cart validate(int cartId) throws IOException;
 	
-	void update(String cartId, Cart cart);
-	
-	void delete(String cartId);
+	void update(Cart cart);
 
 }

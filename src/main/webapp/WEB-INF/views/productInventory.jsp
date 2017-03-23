@@ -31,17 +31,17 @@
 					<td>${product.productCategory}</td>
 					<td>${product.productCondition}</td>
 					<td>${product.productPrice} USD</td>
-					<td><a href="<spring:url value="/productList/viewProduct/${product.productId}" />"
+					<td><a href="<spring:url value="/product/viewProduct/${product.productId}" />"
 					class="btn btn-primary"><!-- <span class="glyphicon glyphicon-info-sign"></span> -->Detail</a></td>
 										
-					<td><a href="<spring:url value="/admin/productInventory/editProduct/${product.productId}" />"
+					<td><a href="<spring:url value="/admin/product/editProduct/${product.productId}" />"
 					class="btn btn-primary"><!-- <span class="glyphicon glyphicon-info-pencil"></span> -->Edit</a></td>
 					
-					<td><a href="<spring:url value="/admin/productInventory/deleteProduct/${product.productId}" />"
+					<td><a href="<spring:url value="/admin/product/deleteProduct/${product.productId}" />"
 					class="btn btn-danger"><!-- <span class="glyphicon glyphicon-info-remove"></span> -->Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>
 		
-		<a href="<c:url value="/admin/productInventory/addProduct" />" class="btn btn-primary">Add Product</a>
+		<a href="<c:url value="/admin/product/addProduct" />" class="btn btn-primary">Add Product</a>
 <%@include file="/WEB-INF/views/template/footer.jsp"%>

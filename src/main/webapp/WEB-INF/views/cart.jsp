@@ -15,6 +15,7 @@
 		<div ng-controller = "cartCtrl" ng-init="initCartId('${cartId}')">
 			<div>
 				<a class="btn btn-danger pull-left" ng-click="clearCart()"><span class="glyphicon glyphicon-remove-sign"></span>Clear Cart</a>
+				<a href="<c:url value="/order/${cartId}" />" class="btn btn-success pull-right"><span class="glyphicon-shopping-cart glyphicon"></span>Check out</a>
 			</div>
 			
 			<table class="table table-hover">
@@ -37,13 +38,13 @@
 					<th></th>
 					<th></th>
 					<th>Grand Total</th>
-					<th>{{cart.grandTotal}}</th>
+					<th>{{calGrandTotal()}}</th>
 					<th></th>
 				</tr>
 				
 			</table>
 			
-			<a href="<c:url value="/productList"/>" class="btn btn-default">Continue Shopping</a>
+			<a href="<c:url value="/product/productList"/>" class="btn btn-default">Continue Shopping</a>
 			</div>
 		</section>
 	</div>
