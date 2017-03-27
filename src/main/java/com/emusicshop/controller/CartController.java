@@ -33,7 +33,6 @@ public class CartController {
 		Customer customer = customerService.getCustomerByUsername(name);
 		int cartId = customer.getCart().getCartId();
 		 return "redirect:/customer/cart/"+cartId;
-
 	}
 
 	@RequestMapping("/{cartId}")

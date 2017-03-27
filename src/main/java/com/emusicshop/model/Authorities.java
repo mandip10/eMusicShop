@@ -13,7 +13,6 @@ public class Authorities {
 	private String username;
 	private String authority;
 	
-	
 	public int getAuthoritiesId() {
 		return authoritiesId;
 	}

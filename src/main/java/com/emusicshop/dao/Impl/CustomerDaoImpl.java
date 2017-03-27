@@ -51,8 +51,6 @@ public class CustomerDaoImpl implements CustomerDao{
 		session.saveOrUpdate(newCart);
 		
 		session.flush();
-		
-		
 	}
 	
 	public Customer getCustomerById (int customerId){

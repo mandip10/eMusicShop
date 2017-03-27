@@ -31,4 +31,5 @@
 					</tr>
 			</c:forEach>
 		</table>
+		
 <%@include file="/WEB-INF/views/template/footer.jsp"%>
