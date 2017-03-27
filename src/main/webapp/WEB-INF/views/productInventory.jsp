@@ -38,7 +38,7 @@
 					class="btn btn-primary"><!-- <span class="glyphicon glyphicon-info-pencil"></span> -->Edit</a></td>
 					
 					<td><a href="<spring:url value="/admin/product/deleteProduct/${product.productId}" />"
-					class="btn btn-danger"><!-- <span class="glyphicon glyphicon-info-remove"></span> -->Delete</a></td>
+					class="btn btn-danger" ><!-- <span class="glyphicon glyphicon-info-remove"></span> -->Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>

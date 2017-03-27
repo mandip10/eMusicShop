@@ -54,19 +54,18 @@
 						<ul class="nav navbar-nav">
 							<li><a href="<c:url value="/" />">Home</a></li>
 							<li><a href="<c:url value="/product/productList" />">Products</a></li>
-							<li><a href="#contact">Contact</a></li>
-							
 						</ul>
 						<ul class ="nav navbar-nav pull-right">
 							<c:if test="${pageContext.request.userPrincipal.name !=null }">
 								<li><a>Welcome: ${pageContext.request.userPrincipal.name}</a></li>
-								<li><a href="<c:url value="/logout" />">Logout</a></li>
+								
 								<c:if test="${pageContext.request.userPrincipal.name !='admin' }">
 									<li><a href="<c:url value="/customer/cart" />">Cart</a></li>
 								</c:if>
 								<c:if test="${pageContext.request.userPrincipal.name =='admin'}">
 									<li><a href="<c:url value="/admin/" />">Admin</a></li>
 								</c:if>
+								<li><a href="<c:url value="/logout" />">Logout</a></li>
 							</c:if>
 							<c:if test="${pageContext.request.userPrincipal.name ==null}">
 							<li><a href="<c:url value="/admin"/>">Login</a></li>

@@ -26,6 +26,8 @@ public class HomeController {
 		
 		return "login";
 	}
+	
+	
 	@RequestMapping("/logout")
 	public String logout(){
 		return "redirect:login?logout";

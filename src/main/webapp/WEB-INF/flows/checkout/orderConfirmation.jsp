@@ -60,7 +60,7 @@
 								<thead>
 									<tr>
 										<th>Product</th>
-										<th>#</th>
+										<th>Qty</th>
 										<th class="text-center">Price</th>
 										<th class="text-center">Total</th>
 									</tr>

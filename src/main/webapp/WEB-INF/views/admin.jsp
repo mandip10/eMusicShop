@@ -16,16 +16,16 @@
 				value="/logout" />">Logout</a>
 			</h2>
 		</c:if> --%>
-		<h2>
+		<%-- <h2>
 			Welcome: <font style="text-transform: capitalize;">${pageContext.request.userPrincipal.name} </font>
-		</h2>
+		</h2> --%>
 		<h3>
 			<a href="<c:url value="/admin/productInventory" />">Product
 				Inventory</a>
 		</h3>
 		<p>Here you can view, check and modify the product inventory!</p>
 		
-		<br><br>
+		<br>
 		<h3>
 			<a href="<c:url value="/admin/customer" />">Customer Management</a>
 		</h3>

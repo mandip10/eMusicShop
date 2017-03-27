@@ -20,9 +20,9 @@ cartApp.controller("cartCtrl",function($scope,$http){
 	$scope.addToCart = function(productId){
 		$http.put("/eMusicShop/rest/cart/add/"+productId).success(function(){
 			 alert("Product successfully added to the cart!");
-		})/*.error(function(error,status){
+		}).error(function(error,status){
 			alert("Error" +error,status);
-		})*/;
+		});
 			
 		
 	};
@@ -41,5 +41,16 @@ cartApp.controller("cartCtrl",function($scope,$http){
 		}
 		
 		return grandTotal;
+	}
+	
+	$scope.calTotalQuantity=function(){
+		
+		var totalQty=0;
+		
+		for(var i=0; i<$scope.cart.cartItems.length;i++){
+			totalQty+=$scope.cart.cartItems[i].quantity;
+		}
+		
+		return totalQty;
 	}
 });
