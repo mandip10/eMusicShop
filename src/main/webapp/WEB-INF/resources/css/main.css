@@ -23,7 +23,7 @@
 .table td {
 	text-align: center;
 	background: whitesmoke;
-	display: inline-grid !important;
+	/*display: inline-grid !important;*/
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
