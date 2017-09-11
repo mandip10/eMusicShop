@@ -38,7 +38,7 @@
 					</c:if>
 					<p ng-controller="cartCtrl">
 						<a href="<c:url value="${url}" />" class="btn btn-default">Back</a>
-						<c:if test="${pageContext.request.userPrincipal.name !='admin'}">
+						<c:if test="${(pageContext.request.userPrincipal.name !='admin') && (pageContext.request.userPrincipal.name !=null)}">
 						<a href="#" class="btn btn-warning btn-large"
 						ng-click="addToCart('${product.productId}')"><span
 							class="glyphicon glyphicon-shopping-cart"></span>Order Now</a>
